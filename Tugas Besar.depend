@@ -20,7 +20,7 @@
 	"obat.h"
 	"transaksi.h"
 
-1480736834 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\obat.cpp
+1480745356 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\obat.cpp
 	"obat.h"
 
 1480682812 a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\obat.h
@@ -29,7 +29,7 @@
 	<windows.h>
 	<stdlib.h>
 
-1480680887 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\transaksi.cpp
+1480763472 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\transaksi.cpp
 	"transaksi.h"
 
 1480682863 a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\transaksi.h
@@ -37,7 +37,7 @@
 	<iostream>
 	<sstream>
 
-1480682693 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\main.cpp
+1480765258 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\main.cpp
 	"obat.h"
 	"transaksi.h"
 

@@ -18,19 +18,35 @@ void inputObat(listObat &L){
     clrscr();
     address P = NULL;
     infotype x;
-
-    cout << "Kode Obat : "; cin >> x.kode_obat;
+    gotoxy(8,1);cout << "===INPUT===";
+    gotoxy(30,3);cout << "+-------------------+";
+    gotoxy(30,4);cout << "|     Keterangan    |";
+    gotoxy(30,5);cout << "+-------------------+";
+    gotoxy(30,6);cout << "|                   |";
+    gotoxy(30,7);cout << "+-------------------+";
+    gotoxy(2,2);cout << "Kode Obat : ";
+    gotoxy(2,4);cout << "Nama Obat : ";
+    gotoxy(2,5);cout << "Jenis     : ";
+    gotoxy(2,6);cout << "Kategori  : ";
+    gotoxy(2,7);cout << "Harga     : ";
+    gotoxy(2,8);cout << "Stok      : ";
+    gotoxy(14,2); cin >> x.kode_obat;
     P = findObat(L,x.kode_obat);
     if  (P==NULL){
-        cout << "Nama Obat  : "; cin >> x.nama;
-        cout << "jenis      : "; cin >> x.jenis;
-        cout << "kategori   : "; cin >> x.kategori;
-        cout << "stok       : "; cin >> x.stok;
-        cout << "Harga      : "; cin >> x.harga;
+        gotoxy(14,4); cin >> x.nama;
+        gotoxy(14,5); cin >> x.jenis;
+        gotoxy(14,6); cin >> x.kategori;
+        gotoxy(14,7); cin >> x.harga;
+        gotoxy(14,8); cin >> x.stok;
         insertObat(L,x);
-        cout << "Data berhasil dimasukkan";
+        gotoxy(31,6);cout << "Berhasil dimasukkan";
     } else {
-        cout << "Kode sudah ada, data tidak dapat diinputkan";
+        gotoxy(33,6);cout << "Kode sudah ada";
+        gotoxy(14,4); cout << info(P).nama;
+        gotoxy(14,5); cout << info(P).jenis;
+        gotoxy(14,6); cout << info(P).kategori;
+        gotoxy(14,7); cout << info(P).harga;
+        gotoxy(14,8); cout << info(P).stok;
     }
 }
 
@@ -217,11 +233,11 @@ address findObat(listObat L, int x){
     */
     address P = first(L);
     if (P != NULL){
-        while ((x != info(P).kode_obat) and (P!=NULL)){
+        while ((P != NULL) and (x != info(P).kode_obat)){
             P = next(P);
         };
-        return P;
     };
+    return P;
 }
 
 void printObat(listObat L){

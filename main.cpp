@@ -115,7 +115,7 @@ void menuDeleteObat(listObat &Obat){
             deleteObat(Obat,P);
             gotoxy(32,6);cout << "Berhasil Dihapus";
         } else{
-            gotoxy(32,6);cout << "Dibatalkan";
+            gotoxy(32,6);cout << "   Dibatalkan";
         }
     }
 }
@@ -129,24 +129,28 @@ void menuDeleteBarang(listObat &Obat, listTRX &trans){
     string idtransaksi;
     int idBarang, BRG;
 
-    gotoxy(1,4);cout << "-----------------------------------------------------------------";
-    gotoxy(1,5);cout << "| No Transaksi | Kode Obat | Nama Barang | Jumlah | Total Akhir |";
-    gotoxy(1,6);cout << "+---------------------------------------------------------------+";
+    gotoxy(1,4);cout << "----------------------------------------------------------------------";
+    gotoxy(1,5);cout << "| No Transaksi | No | Kode Obat | Nama Barang | Jumlah | Total Akhir |";
+    gotoxy(1,6);cout << "+--------------------------------------------------------------------+";
     gotoxy(1,2);cout << "ID Transaksi : "; cin >> idtransaksi;
     addressTRX P = findTRX(trans, idtransaksi);
     if (P != NULL ) {
         int i = 7;
         gotoxy(3,i) ;cout << info(P).no_transaksi;
-        gotoxy(53,i);cout << info(P).total_akhir;
+        gotoxy(58,i);cout << info(P).total_akhir;
 
         printBRG(listBarang(P),i,BRG);
-        gotoxy(1,i) ;cout << "+---------------------------------------------------------------+";
+        gotoxy(1,i) ;cout << "+--------------------------------------------------------------------+";
 
         gotoxy(1,i+2);cout << "No Barang : "; cin >> idBarang;
         addressBRG B = findBRG(listBarang(P),idBarang);
 
         if (B != NULL){
-            deleteBarang(listBarang(P),B);
+            if (next(first(listBarang(P))) == NULL){
+                deleteTransaksi(trans, P);
+            } else {
+                deleteBarang(listBarang(P),B);
+            }
         } else {
             cout << "Barang tidak ditemukan";
         }

@@ -123,17 +123,17 @@ void printTRX(listTRX L){
     addressTRX P = first(L);
     int transaksi = 0, barang =0;
     clrscr();
-    gotoxy(1,1);cout << "-----------------------------------------------------------------";
-    gotoxy(1,2);cout << "| No Transaksi | Kode Obat | Nama Barang | Jumlah | Total Akhir |";
-    gotoxy(1,3);cout << "+---------------------------------------------------------------+";
+    gotoxy(1,1);cout << "----------------------------------------------------------------------";
+    gotoxy(1,2);cout << "| No Transaksi | No | Kode Obat | Nama Barang | Jumlah | Total Akhir |";
+    gotoxy(1,3);cout << "+--------------------------------------------------------------------+";
     if (P!=NULL){
         int i = 4;
         do{
             transaksi++;
             gotoxy(3,i);cout << info(P).no_transaksi;
-            gotoxy(53,i);cout << info(P).total_akhir;
+            gotoxy(58,i);cout << info(P).total_akhir;
             printBRG(listBarang(P),i,barang);
-            gotoxy(1,i);cout << "+---------------------------------------------------------------+";
+            gotoxy(1,i);cout << "+--------------------------------------------------------------------+";
             P = next(P);
             i++;
         } while (P!=NULL);
@@ -296,15 +296,11 @@ void printBRG(listBRG L, int &i, int &j){
     if (P != NULL){
         do{
             j = j + info(P).jumlah;
-            gotoxy(1,i);cout << "|";
-            gotoxy(16,i);cout << "|";
-            gotoxy(28,i);cout << "|";
-            gotoxy(42,i);cout << "|";
-            gotoxy(51,i);cout << "|";
-            gotoxy(65,i);cout << "|";
-            gotoxy(18,i);cout << info(barang(P)).kode_obat;
-            gotoxy(30,i);cout << info(barang(P)).nama;
-            gotoxy(44,i);cout << info(P).jumlah;
+            gotoxy(16,i);cout << "|    |           |             |        |";
+            gotoxy(18,i);cout << info(P).no;
+            gotoxy(23,i);cout << info(barang(P)).kode_obat;
+            gotoxy(35,i);cout << info(barang(P)).nama;
+            gotoxy(49,i);cout << info(P).jumlah;
             i++;
             P = next(P);
         } while( P != NULL);

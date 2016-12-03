@@ -2,16 +2,16 @@
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="0" tabpos="1">
-		<Cursor position="3093" topLine="111" />
+		<Cursor position="2608" topLine="53" />
 	</File>
-	<File name="obat.cpp" open="1" top="1" tabpos="3">
-		<Cursor position="1331" topLine="24" />
+	<File name="obat.cpp" open="1" top="0" tabpos="3">
+		<Cursor position="2863" topLine="28" />
 	</File>
 	<File name="obat.h" open="1" top="0" tabpos="4">
 		<Cursor position="757" topLine="33" />
 	</File>
-	<File name="transaksi.cpp" open="1" top="0" tabpos="2">
-		<Cursor position="6415" topLine="185" />
+	<File name="transaksi.cpp" open="1" top="1" tabpos="2">
+		<Cursor position="8488" topLine="229" />
 	</File>
 	<File name="transaksi.h" open="1" top="0" tabpos="5">
 		<Cursor position="1790" topLine="53" />
