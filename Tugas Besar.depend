@@ -20,3 +20,24 @@
 	"obat.h"
 	"transaksi.h"
 
+1480736834 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\obat.cpp
+	"obat.h"
+
+1480682812 a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\obat.h
+	<iostream>
+	<conio.h>
+	<windows.h>
+	<stdlib.h>
+
+1480680887 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\transaksi.cpp
+	"transaksi.h"
+
+1480682863 a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\transaksi.h
+	"obat.h"
+	<iostream>
+	<sstream>
+
+1480682693 source:a:\study\telkom university\semester 3 [we're here]\struktur data\tubes\1301154174\tubes_faisal\main.cpp
+	"obat.h"
+	"transaksi.h"
+

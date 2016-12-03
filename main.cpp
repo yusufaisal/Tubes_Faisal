@@ -18,10 +18,6 @@ int main()
     createListObat(Obat);
     createTransaksi(trans);
     ObatinDong(Obat);
-
-    //printObat(Obat);
-    //inputTransaksi(Obat);
-    //printTRX(trans);
     int pilih;
     do {
         clrscr();
@@ -68,42 +64,42 @@ void ObatinDong(listObat &L){
 
     x.kode_obat = 12345;
     x.jenis = "kapsul";
-    x.nama = "Paramorex";
-    x.kategori = "Mabuk";
+    x.nama = "Mixagrip";
+    x.kategori = "Bebas";
     x.harga = 11000;
     x.stok = 13;
     insertObat(Obat,x);
 
     x.kode_obat = 43231;
-    x.jenis = "kapsul";
-    x.nama = "Panadol";
-    x.kategori = "Mabuk";
+    x.jenis = "Tablet";
+    x.nama = "Antimo";
+    x.kategori = "Bebas";
     x.stok = 13;
-    x.harga = 30000;
+    x.harga = 5000;
     insertObat(Obat,x);
 
     x.kode_obat = 3231;
     x.jenis = "kapsul";
     x.nama = "Panadol";
-    x.kategori = "Mabuk";
+    x.kategori = "Keras";
     x.stok = 13;
-    x.harga = 90000;
+    x.harga = 12000;
     insertObat(Obat,x);
 
     x.kode_obat = 12346;
-    x.jenis = "kapsul";
-    x.nama = "Panadol";
-    x.kategori = "Mabuk";
-    x.stok = 13;
-    x.harga = 340000;
+    x.jenis = "Tablet";
+    x.nama = "Penisilin";
+    x.kategori = "Keras";
+    x.stok = 20;
+    x.harga = 15000;
     insertObat(Obat,x);
 
     x.kode_obat = 12349;
-    x.jenis = "kapsul";
-    x.nama = "Panadol";
-    x.kategori = "Mabuk";
-    x.stok = 13;
-    x.harga = 38000;
+    x.jenis = "Tablet";
+    x.nama = "Amoxilin";
+    x.kategori = "Keras";
+    x.stok = 19;
+    x.harga = 20000;
     insertObat(Obat,x);
 }
 
@@ -146,7 +142,7 @@ void menuDeleteBarang(listObat &Obat, listTRX &trans){
         printBRG(listBarang(P),i,BRG);
         gotoxy(1,i) ;cout << "+---------------------------------------------------------------+";
 
-        cout << "No Barang : "; cin >> idBarang;
+        gotoxy(1,i+2);cout << "No Barang : "; cin >> idBarang;
         addressBRG B = findBRG(listBarang(P),idBarang);
 
         if (B != NULL){
